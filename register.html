@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Registration | SL Tour Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky 500
+                        secondary: '#10b981', // Emerald 500
+                        dark: '#0f172a' // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md text-slate-900 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot text-3xl text-primary"></i>
+                        <span class="font-bold text-2xl tracking-wider">SL TOUR <span class="text-primary">GUIDE</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="destinations.html" class="hover:text-primary transition">Destinations</a>
+                    <a href="cabs.html" class="hover:text-primary transition">Cab Service</a>
+                    <a href="register.html" class="text-primary font-bold transition">Join as Driver</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-500 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-slate-900 absolute w-full shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 hover:text-primary">Home</a>
+                <a href="destinations.html" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 hover:text-primary">Destinations</a>
+                <a href="cabs.html" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 hover:text-primary">Cab Service</a>
+                <a href="register.html" class="block px-3 py-2 bg-slate-100 text-primary rounded-md font-bold">Join as Driver</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="pt-28 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left: Info -->
+                <div class="animate-fade-in">
+                    <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Partner With Us</span>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        Turn Your Vehicle Into a <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Money-Making</span> Machine.
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Join Sri Lanka's fastest-growing tourist transportation network. Whether you drive a Tuk-Tuk, a car, or a van, we connect you directly with tourists looking for reliable rides and tours.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-money-bill-wave text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-1">Earn More, Consistently</h3>
+                                <p class="text-slate-600 text-sm">Get access to thousands of tourists daily. You keep the majority of the fare, while we charge a small, transparent commission for providing the platform and premium support.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-xl text-secondary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-1">Flexible Schedule</h3>
+                                <p class="text-slate-600 text-sm">Be your own boss. Log in and accept rides whenever you want. Work part-time or full-time.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-shield-halved text-xl text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-1">Safe & Secure</h3>
+                                <p class="text-slate-600 text-sm">All tourists are verified. We provide 24/7 partner support to ensure you are safe on the road.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Registration Form -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-100 relative overflow-hidden animate-fade-in delay-100">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-secondary opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+                    
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Create Partner Account</h2>
+                    <p class="text-slate-500 text-sm mb-8">Fill out the details below to start earning.</p>
+
+                    <form id="registrationForm" class="space-y-5 relative z-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">First Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary bg-slate-50 outline-none transition" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Last Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary bg-slate-50 outline-none transition" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Mobile Number</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary bg-slate-50 outline-none transition" placeholder="+94 7X XXX XXXX">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Vehicle Type</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary bg-slate-50 outline-none transition">
+                                <option value="">Select your vehicle type</option>
+                                <option value="tuktuk">Tuk-Tuk (Three Wheeler)</option>
+                                <option value="car_mini">Mini Car (Alto, WagonR)</option>
+                                <option value="car_sedan">Sedan (Prius, Axio, Allion)</option>
+                                <option value="van">Van (KDH, Caravan)</option>
+                                <option value="suv">SUV / Jeep</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Vehicle Registration Number</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary bg-slate-50 outline-none transition" placeholder="WP ABC-1234">
+                        </div>
+
+                        <div class="flex items-start gap-3 mt-6">
+                            <input type="checkbox" required class="mt-1 w-4 h-4 text-primary bg-slate-100 border-slate-300 rounded focus:ring-primary">
+                            <label class="text-sm text-slate-600">
+                                I agree to the <a href="#" class="text-primary hover:underline">Terms & Conditions</a> and understand the commission structure of SL Tour Guide platform.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 hover:shadow-lg transform hover:-translate-y-0.5 transition-all text-lg mt-4 flex justify-center items-center">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-3xl text-primary"></i>
+                    <span class="font-bold text-xl tracking-wider">SL TOUR <span class="text-primary">GUIDE</span></span>
+                </a>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 SL Tour Guide. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
